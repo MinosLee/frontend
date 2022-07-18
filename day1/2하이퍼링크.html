@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 실행 url 확인 : file:///D:/study/frontend/day1/2%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC.html
+지금 우리 소스는 파일 열기로 브라우저에서 실행하는 것임. 프로토콜이 http가 아님 -->
+<body>
+    <!-- a(anchor): 하이퍼링크 기능 태그 -->
+    <!-- href속성 : 이동할 경로(URL)를 설정 -->
+    구글로 이동<a href= "https://www.google.com">Google 구글</a><br>
+    네이버로이동<a href= "https://www.naver.com">Naver 네이버</a><br>
+    잘못된 주소 테스트<a href= "https://www.navr">없는 URL</a><br>
+    같은 경로의 파일로 이동하기 <href = "1start.html" target=" "_blank>1start.html</a>
+        <!-- 폴더경로는 그대로 파일명만 변경됨 -->
+
+        <!-- 파일명을 지정할 때 상대경로에 대한 내용 테스트
+        (상대 경로: 현재를 기준으로 같은 폴더? 파일명만 작성
+                                 하위폴더?  하위폴더명/파일명
+                                 상위폴더?  ../파일명
+                                 형제(같은레벨) 폴더? ../형제폴더명/파일명
+                                 ) -->
+
+            상위폴더 파일로 링크: <a herf = "../test1.html" target ="_blank">test1.html</a><br>
+            형제폴더 파일로 링크: <a herf = "../sibling/test0.html" target ="_blank">test0.html</a><br>
+
+</body>
+</html>

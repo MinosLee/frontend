@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>하이퍼링크 상대경로 테스트</h2>
+    <!-- 2) 하위폴더? 하위폴더명/ 파일명으로 함. test0.html에서 확인
+    test0.html 현재파일이 위치한 폴더는 frontend 의 하위폴더 파일로 가는 경우 
+    ../는 현재 위치에서~
+-->
+    
+day1폴더 파일로 링크 <a href= "day1/1start.html">1start.html</a><br>
+sibling폴더 파일로 링크 <a href= "day1/sibling/test0.html">test0.html</a><br>
+day1폴더 파일로 링크 <a href= "./day1/1start.html">1start.html</a><br>
+sibling폴더 파일로 링크 <a href= "./day1/sibling/test0.html">test0.html</a><br>
+sibling폴더 파일(절대경로)로 링크 <a href= "D:\study\frontend\day1\sibling\test0.html">test0.html</a><br>
+<!-- 절대경로: 파일 앞자리를 생략하지않고 전부 붙이는 것 -->
+</body>
+</html>
