@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 2개의 태그 td, th선택 */
+        td,th{
+            
+            padding : 10px;
+            border : 1px solid gray;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 칸 합치기 colspan, rowspan(연습) 
+    https://www.w3schools.com/html/html_table_colspan_rowspan.asp
+    2) 시간표 작성하기 : colspan, rowspan활용 -> 구글폴더에 올리기-->
+    
+    <table style="width : 80%; margin : auto;">
+        <tr>
+            <!-- th태그 기본스타일: 중앙정렬, 굵게 -->
+            
+            <th style= "width: 15%;">시간</th>
+            <th style= "width: 15%;">월요일</th>
+            <th style= "width: 15%;">화요일</th>
+            <th style= "width: 15%;">수요일</th>
+            <th style= "width: 15%;">목요일</th>
+            <th style= "width: 15%;">금요일</th>
+        </tr>
+
+        <tr>
+            <td>09:00~09:50</td>
+            <td rowspan="2">교회사 개론</td> 
+            <td rowspan="3"></td>
+            <td rowspan="2">조직신학개론</td>
+            <td></td>
+            <td rowspan="10"> 공        강        일</td>
+        </tr>
+
+        <tr>
+            <td>10:00~10:50</td>
+            
+            <td rowspan="2">구약 개론</td>
+            
+
+        </tr>
+
+        <tr>
+            <td>11:00~11:50</td>
+            <td rowspan="2">상담 신학</td>
+            <td rowspan="2">교회사 개론</td>
+            
+        </tr>
+
+        <tr>
+            <td>12:00~12:50</td>
+            <td>점심시간</td>
+            <td>점심시간</td>
+            
+        </tr>
+        
+        <tr>
+            <td>13:00~13:50</td>
+            <td>점심시간</td>
+            <td rowspan="2">교회사 개론</td>
+            <td>점심시간</td>
+            <td rowspan="2">상담 신학</td>
+            
+        </tr>
+
+        <tr>
+            <td>14:00~14:50</td>
+            <td rowspan="2">구약 개론</td>
+            <td>채플</td>
+            
+            
+        </tr>
+        
+        <tr>
+            <td>15:00~15:50</td>
+            <td rowspan="2">조직신학개론</td>
+            <td></td>
+            <td rowspan="4"></td>
+            
+            
+        </tr>
+        
+        <tr>
+            <td>16:00~16:50</td>
+            <td rowspan="3">포토샵 입문</td>
+            <td rowspan="3" >철학 입문</td>
+            
+            
+            
+        </tr>
+
+        <tr>
+            <td>17:00~17:50</td>
+            <td rowspan="2"> 한의학</td>
+            
+            
+        </tr>
+
+        <tr>
+            <td>18:00~18:50</td>
+            
+            
+            
+        </tr>
+</body>
+</html>

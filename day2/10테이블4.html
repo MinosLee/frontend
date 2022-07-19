@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day2_표4</title>
+    <style>
+        td {
+            border: 1px solid gray;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 400px;
+        }
+        /* 자식요소 tr중 첫번째 것 찾아서 그것에 자식 td요소 선택 
+            자식요소 선택 기호는 >*/
+        tr:nth-child(1)>td {
+            width: 100 px;
+            background-color: bisque;
+        }
+        /* table 3번째 것 찾아서 자손 td요소 선택자손요소 선택기호는 공백 */
+        table:nth-child(3) td{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- td합치기 (span) : 옆 칸과 합치기 colspan속성, 아래 칸과 합치기 rowspan속성
+                                속성값은 합쳐지는 칸의 갯수 -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <table>
+        <!-- td합치기 (span) : 옆 칸과 합치기 colspan속성, 아래 칸과 합치기 rowspan속성
+                                속성값은 합쳐지는 칸의 갯수 -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2">5</td>
+            <td rowspan="2">6</td>
+            
+        </tr>
+        <tr>
+            <td>7</td>
+            <td colspan="2">8</td>
+            
+        </tr>
+    </table>
+    <table>
+        <!-- td합치기 (span) : 옆 칸과 합치기 colspan속성, 아래 칸과 합치기 rowspan속성
+                                속성값은 합쳐지는 칸의 갯수 -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2">5</td>
+            <td rowspan="2">6</td>
+            
+        </tr>
+        <tr>
+            <td>7</td>
+            <td colspan="2">8</td>
+            
+        </tr>
+    </table>
+</body>
+
+</html>
