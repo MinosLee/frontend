@@ -1,33 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         td {
-            border: 1px solid gray;
+        td {
+            border: 1px solid black;
             font-size: 1.2em;
         }
 
         table {
-            width: 400px;
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto
+
         }
+
+        body {
+            background-color: rgb(224, 224, 224);
+        }
+
+        tr:last-child(7)>td {
+            background-color: white;
+            text-align: left;
+        }
+
+        input[type=number],
+        input[type=password] {
+            width: 40%;
+
+        }
+
+        input[type=phone] {
+            width: 60%;
+        }
+
+        input[type=addr] {
+            width: 90%
+        }
+
+        input[type=jnumber],
+        input[type=grade],
+        input[type=code] {
+            width: 50%;
+            
+        }
+        h2{text-align: center;}
     </style>
 </head>
+
 <body>
-    <table style="width:80%; margin : auto;"></table>
-    <tr>
-        <th style = "width:15%;" colspan="7"; >쇼핑몰 회원관리 ver 1.0</th> 
-    </tr>
-    <tr>
-        <td>회원등록</td>
-        <td>회원목록 조회/수정</td>
-        <td>회원매출조회</td>
-        <td>홈으로.</td>
-        <td rowspan="3"></td>
-    </tr>
-    
+
+    <h2>홈쇼핑 회원등록</h2>
+    <table border="1" width="800px" >
+        <td>
+
+    <div style="width: 100%; margin: auto; max-width: 1000px;">
+
+        <table style="width: 100%;">
+            <tr>
+                <td><label for="lblnumber" class="title">회원번호(자동발생)</label></td>
+                <td><input type="number" name="code" id="lblnumber"></td>
+            </tr>
+            <tr>
+                <td><label for="name" class="title">회원성명</label></td>
+                <td><input type="text" name="name" minlength="4" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="phone" class="title">회원전화</label></td>
+                <td><input type="pnumber" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td><label for="lbladdr" class="title">회원주소</label></td>
+                <td><input type="addr" name="addr" id="lbladdr"></td>
+            </tr>
+            <tr>
+                <td><label for="lbljoin_date" class="title">가입일자</label></td>
+                <td><input type="jnumber" name="join_date" id="lbljoin_date"></td>
+            </tr>
+            <tr>
+                <td><label for="lblgrade" class="title">고객등급(A:VIP, B:일반, C:직원)</label></td>
+                <td><input type="grade" name="grade" id="lblgrade"></td>
+            </tr>
+            <tr>
+                <td><label for="lbladdcode" class="title">도시코드</label></td>
+                <td><input type="code" name="addcode" id="lbladdcode"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>등록</button>
+                    <button>조회</button>
+                </td>
+            </tr>
+        </table>
+
+        
+    </div>
+    </td>
+</table>
 </body>
+
 </html>
