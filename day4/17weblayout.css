@@ -8,9 +8,7 @@
 h3{
     text-align: center;
 }
-.nav{
-    
-}
+
 body{
     width:100%;
 
@@ -23,7 +21,7 @@ ul{
     margin-left: -50px;
 }
 ul > li {
-    
+     
     float:left;
 }
 /* 위의 border로 영역확인 : ul영역이 li영역보다 작음 */
