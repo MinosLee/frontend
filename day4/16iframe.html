@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Day4_iframe</title>
+</head>
+<body>
+    <!-- iframe은 인라인 요소(inline frame): 현재 문서에 다른 문서를 포함시킴.
+    포함시킬 문서의 url (http주소, 파일명)은 src속성으로 설정 -->
+    <h4>13form.html문서담기</h4>
+    <!-- root경로 (http://127.0.0.1:5502/) 바로 아래 있는 폴더 day3지정
+    파일열기로 했을때는 동작안함. -->
+    <iframe src="/day3/13form.html" frameborder="0"></iframe>
+    <!-- 한단계 상위폴더 이동 후 day3폴더 -->
+    <iframe src="../day3/13form.html" frameborder="0"></iframe>
+    <h4>공유링크 퍼오기</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-wQfVWgV5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://youtu.be/Z-wQfVWgV5c"></iframe>
+    <h4>url직접지정</h4>
+    <iframe src="https://www.youtube.com/" frameborder="0"></iframe>
+
+
+</body>
+</html>

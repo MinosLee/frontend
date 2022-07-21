@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            border: 1px solid black;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto
+        }
+
+        body {
+            background-color: rgb(224, 224, 224);
+        }
+
+        tr:last-child(7)>td {
+            background-color: white;
+            text-align: left;
+        }
+
+        input[type=number],
+        input[type=password] {
+            width: 40%;
+
+        }
+
+        input[type=phone] {
+            width: 60%;
+        }
+
+        input[type=addr] {
+            width: 90%
+        }
+
+        input[type=jnumber],
+        input[type=grade],
+        input[type=code] {
+            width: 50%;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .header {
+            background-color: blue;
+            color: white;
+            padding: 40px 20px;
+            margin-top: -20px;
+            margin-left: -10px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        body {
+            width: 100%;
+
+        }
+
+        ul {
+            list-style: none;
+            background-color: rgb(164, 255, 217);
+            overflow: hidden;
+            margin: auto;
+            margin-left: -50px;
+        }
+        ul > li {
+    
+    float:left;
+}
+/* 위의 border로 영역확인 : ul영역이 li영역보다 작음 */
+ul>li a{
+    display: block;
+    color: brown;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+
+}
+ul>li a:hover{
+    background-color: black;
+    color: white;
+}
+.in{
+    text-align: left;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <!-- header -->
+        <h3 style="text-align:center;">홈쇼핑 회원관리 v1.0</h3>
+    </div>
+    <div class="nav">
+        <!-- nav -->
+        <ul>
+            <li><a href="">회원등록</a></li>
+            <li><a href="">회원목록조회</a></li>
+            <li><a href="">회원매출조회</a></li>
+            <li><a href="">홈으로</a></li>
+
+        </ul>
+    </div>
+
+    <h2>홈쇼핑 회원등록</h2>
+    <table border="1" width="800px">
+        <td>
+
+            <div style="width: 100%; margin: auto; max-width: 1000px;">
+
+                <table style="width: 100%;">
+                    <tr>
+                        <td><label for="lblnumber" class="title">회원번호(자동발생)</label></td>
+                        <td class="in"><input type="number" name="code" id="lblnumber"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name" class="title">회원성명</label></td>
+                        <td class="in"><input type="text" name="name" minlength="4" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone" class="title">회원전화</label></td>
+                        <td class="in"><input type="pnumber" name="phone" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lbladdr" class="title">회원주소</label></td>
+                        <td class="in"><input type="addr" name="addr" id="lbladdr"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lbljoin_date" class="title">가입일자</label></td>
+                        <td class="in"><input type="jnumber" name="join_date" id="lbljoin_date"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lblgrade" class="title">고객등급(A:VIP, B:일반, C:직원)</label></td>
+                        <td class="in"><input type="grade" name="grade" id="lblgrade"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lbladdcode" class="title">도시코드</label></td>
+                        <td class="in"><input type="code" name="addcode" id="lbladdcode"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button>등록</button>
+                            <button>조회</button>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </td>
+    </table>
+</body>
+
+</html>
