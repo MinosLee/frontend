@@ -13,13 +13,15 @@ var selectFormElementValue = selectFomrElement.value;       //value속성이 입
 var selectFormElementValue = document.forms[index].elements[index];
  -->
  <!-- document.forms[0] -->
- <form action="">
+ <!-- 여기 action은 서버페이즈로 작성해야 입력값이 처리됨. 지금은13result로 페이지가 넘어가게만 했지만 사실 서버로 넘겨야 함. -->
+ <form action="13result.html" onsubmit="return forms0_check()" name="frm0">  
      <!-- document.forms[0].elements[0] -->
      <input type="text" name="user" placeholder="이름을 입력하세요"><br>
      <!-- document.forms[0].elements[1] -->
     <input type="text" name="email" placeholder="이메일을 입력하세요">
     <!-- form태그 안의 버튼 type= submit -->
-    <button value="forms[0] button" onsubmit="forms0_check()">전송</button>
+    <button>전송1</button>   <!-- onsubmit="return forns0_check()" 동작시킬때-->
+    <button value="forms[0] button" onclick="btn_check()" type="button">전송2</button>
  </form>
  <!-- document.forms[1] -->
  <form action="" id="momo">
@@ -31,14 +33,28 @@ var selectFormElementValue = document.forms[index].elements[index];
  </form>
 
  <script>
-    function forms0_check(){
-        console.log('1.forms, elements 객체 사용하기')
+    //유효성 검사: 프론트엔드에서 서버로 보내기 전에 해야 함.
+    //아래 두 함수는 유효성을 검사하는 함수.
+    //유효성 검사를 통과하면 제출, 통과하지 못하면 다시 입력
+    function forms0_check(){    //forms의 onsubmit이 실행하는 함수
+        alert('1.forms, elements 객체 사용하기')
         const user = document.forms[0].elements[0]
         const email = document.forms[0].elements[1]
-        console.log('user : ' + user.value)
-        console.log('email : ' + email.value)
-    
-    
+        const btn= document.forms[0].elements[3].value
+        alert('user : ' + user.value)
+        alert('email : ' + email.value)
+        return false //forms의 action으로 제출(이동) return false는 제출 X
+
+    }
+
+    function btn_check(){   //type=button이 실행하는 함수
+        alert('2.type= button  으로 제출')
+        const user= document.frm0.user
+        const email= document.frm0.email
+        alert('user : ' + user.value)
+        alert('email : ' + email.value)
+ //       document.forms[0].action= '13result.html'
+ //       document.forms[0].submit()  //submit함수로 폼 제출
     }
 
 
