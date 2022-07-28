@@ -5,6 +5,44 @@
     <title>jsday4_유효성검사</title>
 </head>
 <body>
+    <!-- form 태그 입력요소 또는 입력요소의 값을 가져오는 방법 
+var selectForm = document.forms[index];     //form 태그 많은 때 순서가 index
+var selectFormElement = document.forms[index].elements[index];
+                ㄴ elements[index]는 form 태그 내부의 입력요소들의 순서가 index
+var selectFormElementValue = selectFomrElement.value;       //value속성이 입력값입니다.
+var selectFormElementValue = document.forms[index].elements[index];
+ -->
+ <!-- document.forms[0] -->
+ <form action="">
+     <!-- document.forms[0].elements[0] -->
+     <input type="text" name="user" placeholder="이름을 입력하세요"><br>
+     <!-- document.forms[0].elements[1] -->
+    <input type="text" name="email" placeholder="이메일을 입력하세요">
+    <!-- form태그 안의 버튼 type= submit -->
+    <button value="forms[0] button" onsubmit="forms0_check()">전송</button>
+ </form>
+ <!-- document.forms[1] -->
+ <form action="" id="momo">
+     <button onclick="alert(document.forms[1].id)">테스트1</button>
+    </form>
+    <!-- document.forms[2]-->
+ <form action="" id="sana">
+    <button>테스트2</button>
+ </form>
+
+ <script>
+    function forms0_check(){
+        console.log('1.forms, elements 객체 사용하기')
+        const user = document.forms[0].elements[0]
+        const email = document.forms[0].elements[1]
+        console.log('user : ' + user.value)
+        console.log('email : ' + email.value)
     
+    
+    }
+
+
+ </script>
+
 </body>
 </html>

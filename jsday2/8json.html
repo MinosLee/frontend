@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsday2_open api & json</title>
+</head>
+<body>
+    <p id="result" style="font-size: 0.7em;"></p>
+    <p id="list"></p>
+
+    <script>
+        //비동기 통신을 위한 객체생성
+        const xhr= new XMLHttpRequest();
+
+        //1. http요청 초기화 : method,url
+        xhr.open("GET","https://dapi.kakao.com/v2/search/vclip?query=이효리&size=30");
+        //2. 요청 header설정
+        xhr.setRequestHeader("Authorization","KakaoAK ca1716357899e3dff45eec7d916a08f8");
+        //3. http요청 전송: 추가적인 파라미터는 함께 전송
+        xhr.send();
+        //4. onload 이벤트 : 요청에 대한 응답이 왔을 때 실행될 이벤트 핸들러 작성
+        xhr.onload= function(){
+            //if(xhr.status==200)  //응답코드가 200일때만 실행
+
+            //요청에 대한 응답을  response프로퍼티가 저장.
+            document.getElementById('result').innerHTML=xhr.response
+
+            //응답으로 받은 documents -객체배열
+            // 객체구성: author, datetime, title, url, play- time,thumbnail
+            //-> 프로퍼티 값들을 태그요소 표현(출력)
+
+            let $response= JSON.parse(xhr.response)
+            let results= $response.documents
+            result.forEach(element => {     //results 배열의 각 값들을 순서대로 element가 참조하며 함수 실행합니다.
+                const $ul= document.createElement('ul') //새로운 ul태그요소 생성
+                // ${}표현식기호 - 변수,수식,함수 등 결과값이 있는것은 사용가능
+                const temp= `<li>${element.author}</li>
+                <li>${element.title}</li>
+                <li>${element.datetime}</li>
+                <li>${element.play_time}</li>
+                <li><a href= ${element.url} target="_blank"><img src=${element.thumbnail} width="200px"></a></li>`
+                //url은 a태그, thumbnail은 img태그에 속성값으로 활용할 수 있음.
+                $ul.innerHTML=temp
+                document.getElementById('list').appendChild($ul) //ul태그요소를 <p id="list"></p>의 자식요소로 추가
+
+            }) //forEach끝
+
+        }//onload끝
+
+
+    </script>
+    
+</body>
+</html>
